@@ -484,6 +484,7 @@ def swapToFrame8():
     elif highestscore == Chandler: 
         winner =  Label(frame8, text= "Chandler", font=("Arial", 20))
         winner.place(x= 200, y= 90)
+        
     elif highestscore == Rachel:
          winner =  Label(frame8, text= "Rachel", font=("Arial", 20))
          winner.place(x= 200, y= 90)
@@ -500,8 +501,10 @@ def swapToFrame8():
         winner =  Label(frame8, text= "Phoebe", font=("Arial", 20))
         winner.place(x= 200, y= 90)
        
-  
 
+    #image = Image.open("ross.png")
+    #backgroundImage=ImageTk.PhotoImage(image) 
+    #image.place(x=200, y= 200)
 
     # my_img = ImageTk.PhotoImage(Image.open("ross.png"))
     # my_label = Label(image= my_img)
@@ -526,4 +529,27 @@ resultstitle.place(x= 145, y= 10)
 
 #this is the main loop which continuously runs the window
 root.mainloop()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
