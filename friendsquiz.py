@@ -9,7 +9,7 @@ from PIL import ImageTk, Image
 
 #this creates a window 
 root = Tk()
-root["bg"] = "black"
+
 
 #this sets the defualt height and width of the window
 root.geometry("700x1000") #figure out the right framing
@@ -40,6 +40,7 @@ Phoebe  = 0
 #This is the title
 title = Label(frame1, text= "Which Friends character do you relate to the most based on your personality?", font= ("Arial", 17) )
 title.place(x= 90, y= 5)
+# frame1.configure(bg= "#5e97f2")
 
 #q1(Label) is stating the question without a button 
 q1 = Label(frame1, text= "What do you value the most?", font= ("Arial", 17)) 
@@ -480,41 +481,67 @@ def swapToFrame8():
     if highestscore == Ross:
        winner =  Label(frame8, text= "Ross",  font=("Arial", 20))
        winner.place(x= 200, y= 90)
-
+       img = Image.open("ross.png") 
+       my_img = ImageTk.PhotoImage(img)
+       my_label = Label(frame8, image= my_img)
+       my_label.photo = my_img
+       my_label.place(x=200, y= 200)
+       new_image = img.resize((250, 200))
+       new_image.save('ross.png')
+    
     elif highestscore == Chandler: 
         winner =  Label(frame8, text= "Chandler", font=("Arial", 20))
         winner.place(x= 200, y= 90)
-        
+        img = Image.open("Chandler.png") 
+        my_img = ImageTk.PhotoImage(img)
+        my_label = Label(frame8, image= my_img)
+        my_label.photo = my_img
+        my_label.place(x=100, y= 200)
+        new_image = img.resize((250, 300))
+        new_image.save('Chandler.png')
+    
     elif highestscore == Rachel:
          winner =  Label(frame8, text= "Rachel", font=("Arial", 20))
          winner.place(x= 200, y= 90)
-         
+         img = Image.open("rachel.png") 
+         my_img = ImageTk.PhotoImage(img)
+         my_label = Label(frame8, image= my_img)
+         my_label.photo = my_img
+         my_label.place(x=200, y= 200)
+         new_image = img.resize((250, 350))
+         new_image.save('rachel.png')
     elif highestscore == Joey:
         winner =  Label(frame8, text= "Joey", font=("Arial", 20))
         winner.place(x= 200, y= 90)
-    
+        img = Image.open("joey.png") 
+        my_img = ImageTk.PhotoImage(img)
+        my_label = Label(frame8, image= my_img)
+        my_label.photo = my_img
+        my_label.place(x=200, y= 200)
+        new_image = img.resize((250, 345))
+        new_image.save('joey.png')
     elif highestscore == Monica:
         winner =  Label(frame8, text= "Monica", font=("Arial", 20))
         winner.place(x= 200, y= 90)
-
+        img = Image.open("monica.png") 
+        my_img = ImageTk.PhotoImage(img)
+        my_label = Label(frame8, image= my_img)
+        my_label.photo = my_img
+        my_label.place(x=100, y= 200)
+        new_image = img.resize((200, 300))
+        new_image.save('monica.png')
     elif highestscore == Phoebe:
         winner =  Label(frame8, text= "Phoebe", font=("Arial", 20))
         winner.place(x= 200, y= 90)
-       
+        img = Image.open("phoebe.png") 
+        my_img = ImageTk.PhotoImage(img)
+        my_label = Label(frame8, image= my_img)
+        my_label.photo = my_img
+        my_label.place(x=200, y= 200)
+        new_image = img.resize((250, 300))
+        new_image.save('Phoebe.png')
 
-    #image = Image.open("ross.png")
-    #backgroundImage=ImageTk.PhotoImage(image) 
-    #image.place(x=200, y= 200)
-
-    # my_img = ImageTk.PhotoImage(Image.open("ross.png"))
-    # my_label = Label(image= my_img)
-    # my_label.place(x=200, y= 200)
-    # img = Image.open("ross.png") 
-    # photo=ImageTk.PhotoImage(img)
-
-    # img  = Image.open("ross.png") 
-    # photo=ImageTk.PhotoImage(img)
-    # lab=Label(image=photo).place(x=50,y=50)
+   
 
 resultstitle = Label(frame8, text= "Based on your options, you relate most to...", font=("Arial", 24))
 resultstitle.place(x= 145, y= 10)
